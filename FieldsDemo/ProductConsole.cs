@@ -35,6 +35,21 @@ class Sample
         System.Console.WriteLine("highest product cost : "+HighestProductCost(book,laptop,mobile));//80000.78
 
         LocalConstantsDemo();
+
+        SubProduct sp = new SubProduct();
+        sp.name = "hp 15";
+        sp.SubProductMethod();
+
+        OtherClassSameAssembly os = new OtherClassSameAssembly();
+        os.OtherClassSameAssembly_Method();
+
+        InternationalProduct ip = new InternationalProduct();
+        ip.name = "hp 150";
+        ip.InternationalProductMethod();
+
+        OtherClassOtherAssembly oc = new OtherClassOtherAssembly();
+        oc.OtherClassOtherAssembly_Method();
+
     }
 
     private static void LocalConstantsDemo()
@@ -45,26 +60,32 @@ class Sample
 
     public class InternationalProduct : Product
     {
-        public void Method()
+        public void InternationalProductMethod()
         {
-            System.Console.WriteLine(id);//accessing public field
+            System.Console.WriteLine("InternationalProductMethod-Other assembly,child class method:");
+            System.Console.WriteLine(name);//accessing public field
             System.Console.WriteLine(prodWarranty);//accessing protected field
             //System.Console.WriteLine(availability);//can't access the internal field in other assemblies
             //System.Console.WriteLine(_productIMEI);//can't access the private field in other classes
-            System.Console.WriteLine(country);//can access protected internal  field in child classes
+           // System.Console.WriteLine(billNo);//can't access private protected field in other classes
+            System.Console.WriteLine("country=>"+country);//can access protected internal  field in child classes
         }
     }
 
 
     public class OtherClassOtherAssembly
     {
-        public void Method()
+        public void OtherClassOtherAssembly_Method()
         {
+            System.Console.WriteLine("OtherClassOtherAssembly_Method:");
             Product lp = new Product();//can't prevent private field being stored inside object 
-            System.Console.WriteLine(lp.id);
+            lp.name = "Samsung 176";
+
+            System.Console.WriteLine(lp.name);//accessing public field
             // System.Console.WriteLine(lp.prodWarranty); //can't access the protected field in other than child classes
             // System.Console.WriteLine(lp.availability);//can't access the internal field in other assemblies
             //System.Console.WriteLine(lp._productIMEI);//can't access the private field in other classes
+            //System.Console.WriteLine(lp.billNo);//can't access private protected field in other classes
             //System.Console.WriteLine(lp.country);//can't access protected internal  field in other classes
         }
     }
