@@ -16,12 +16,12 @@ class Sample
         Console.WriteLine("constant field" + Product.prodTaxNumber);//100 accessing constant field
         Console.WriteLine("laptop dop:"+laptop.dateOfPurchase);//28-11-2024 //accessing readonly field
         
-        Product mobile = new Product("18-07-1999");
+        Product mobile = new Product("18-07-2024");
         mobile.cost = 26000.8;
         mobile.id = 1709;
         mobile.name = "oppo 65";
         mobile.quantityInStock = 2;
-        Console.WriteLine("mobile dop:" + mobile.dateOfPurchase);//18-07-1999 //accessing readonly field
+        Console.WriteLine("mobile dop:" + mobile.dateOfPurchase);//18-07-2024 //accessing readonly field
 
         Product book = new Product();
         book.cost = 900.8;
@@ -56,7 +56,7 @@ class Sample
 
     private static void LocalConstantsDemo()
     {
-        const double pi = 3.14;//local constant
+        const double pi = 3.14;//local constant [ accessmodifier not allowed]
         System.Console.WriteLine(pi);//3.14
     }
 
