@@ -2,7 +2,7 @@
 {
     public class Product
     {
-        public static string mode = "Online";//static field
+        public static string mode = "Online";//static field[stored in class memory area as part of heap]
         public int id; //instance fields 
         public readonly string dateOfPurchase;//readonly instance field
         public string name;
@@ -25,7 +25,7 @@
         }
         public void Mode()
         {
-            System.Console.WriteLine(mode);//no need of classname also when accessing static field
+            System.Console.WriteLine("ModeAvailable=>"+mode);//no need of classname also when accessing static field
         }
     }
 

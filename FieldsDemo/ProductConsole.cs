@@ -9,6 +9,7 @@ class Sample
         laptop.id = 176809;
         laptop.name = "hp 15";
         laptop.quantityInStock = 3;
+        laptop.Mode();//Online [accessing static field inside same class method without need of class name ]
         //laptop._productIMEI  //can't access the private field in other classes
         Console.WriteLine("Static field->"+Product.mode);//Online //accessing static field with classname
         Console.WriteLine("constant field" + Product.prodTaxNumber);//100 accessing constant field
