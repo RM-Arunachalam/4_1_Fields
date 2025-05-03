@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35219.272
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fields", "Fields\Fields.csproj", "{31C6CB96-97EB-4F0C-AF3D-312DB726DAB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FieldsDemo", "FieldsDemo\FieldsDemo.csproj", "{90DC4120-DB96-4C51-97A9-B44EC6ECDA75}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{31C6CB96-97EB-4F0C-AF3D-312DB726DAB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31C6CB96-97EB-4F0C-AF3D-312DB726DAB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31C6CB96-97EB-4F0C-AF3D-312DB726DAB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31C6CB96-97EB-4F0C-AF3D-312DB726DAB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90DC4120-DB96-4C51-97A9-B44EC6ECDA75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90DC4120-DB96-4C51-97A9-B44EC6ECDA75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90DC4120-DB96-4C51-97A9-B44EC6ECDA75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90DC4120-DB96-4C51-97A9-B44EC6ECDA75}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5FC32991-E006-41E8-840A-BDEBAB179758}
+	EndGlobalSection
+EndGlobal
