@@ -16,6 +16,7 @@
         public const int prodTaxNumber = 100;//const field
         public double tax;
 
+
         public Product() { 
             dateOfPurchase = DateTime.Now.ToShortDateString();//MM-DD-YYYY
         }
@@ -23,6 +24,7 @@
         {
             dateOfPurchase=dateOfPurch;//initailizing readonly field with constructor parameter
         }
+
         public void Mode()
         {
             System.Console.WriteLine("ModeAvailable=>"+mode);//no need of classname also when accessing static field
@@ -33,6 +35,8 @@
     {
         public void SubProductMethod()
         {
+            country = "Japan"; //accessing parent class field here and assigning value to it
+            System.Console.WriteLine("*************");
             System.Console.WriteLine("SubProductMethod:");
             System.Console.WriteLine(name);//can access public field
             System.Console.WriteLine(prodWarranty);//can access protected field
@@ -47,6 +51,7 @@
     {
         public void OtherClassSameAssembly_Method()
         {
+            System.Console.WriteLine("*************");
             System.Console.WriteLine("OtherClassSameAssembly_Method:");
             Product lp=new Product();//can't prevent private field being stored inside object 
             lp.name = "1701";

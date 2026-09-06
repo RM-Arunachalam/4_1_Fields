@@ -14,7 +14,7 @@ class Sample
         Console.WriteLine("Static field->"+Product.mode);//Online //accessing static field with classname
         laptop.Mode();//Online [accessing static field inside same class method without need of class name ]
         Console.WriteLine("constant field" + Product.prodTaxNumber);//100 accessing constant field
-        Console.WriteLine("laptop dop:"+laptop.dateOfPurchase);//28-11-2024 //accessing readonly field
+        Console.WriteLine("laptop dop:"+laptop.dateOfPurchase);//06-09-2026 //accessing readonly field
         
         Product mobile = new Product("18-07-2024");
         mobile.cost = 26000.8;
@@ -39,7 +39,7 @@ class Sample
         LocalConstantsDemo();
 
         SubProduct sp = new SubProduct();
-        sp.name = "hp 15";
+        sp.name = "hp 15"; 
         sp.SubProductMethod();
 
         OtherClassSameAssembly os = new OtherClassSameAssembly();
@@ -56,6 +56,7 @@ class Sample
 
     private static void LocalConstantsDemo()
     {
+        //only primitive types and string are allowed as local constants
         const double pi = 3.14;//local constant [ accessmodifier not allowed]
         System.Console.WriteLine(pi);//3.14
     }
@@ -64,6 +65,7 @@ class Sample
     {
         public void InternationalProductMethod()
         {
+            System.Console.WriteLine("*************");
             System.Console.WriteLine("InternationalProductMethod-Other assembly,child class method:");
             System.Console.WriteLine(name);//accessing public field
             System.Console.WriteLine(prodWarranty);//accessing protected field
@@ -79,6 +81,7 @@ class Sample
     {
         public void OtherClassOtherAssembly_Method()
         {
+            System.Console.WriteLine("*************");
             System.Console.WriteLine("OtherClassOtherAssembly_Method:");
             Product lp = new Product();//can't prevent private field being stored inside object 
             lp.name = "Samsung 176";
